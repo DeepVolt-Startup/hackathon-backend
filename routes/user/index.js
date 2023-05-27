@@ -16,25 +16,25 @@ const router = express.Router();
 router.use(auth);
 
 // check for a valid token
-// router.use(verifyToken);
+router.use(verifyToken);
 
 // check for user access
-// router.use(authorizeUser);
+router.use(authorizeUser);
 
 // account recovery
-// router.use(accountRecovery);
+router.use(accountRecovery);
 
 // user CRUD
-// router.use(account);
+router.use(account);
 
 // location CRUD
-// router.use(locations);
+router.use(locations);
 
 // comparison CRUD
-// router.use(comparisons);
+router.use(comparisons);
 
 // (simulations || predictions) CRUD
-// router.use(simulations);
+router.use(simulations);
 
 // geodata CRUD
 router.use(geoData);
