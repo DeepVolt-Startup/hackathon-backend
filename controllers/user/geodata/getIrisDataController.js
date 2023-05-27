@@ -4,7 +4,7 @@ const { Iris } = require("../../../models/Iris");
 const getIrisDataInteractor = require("../../../use-case/user/getIrisDataInteractor");
 
 const getIrisDataController = async (req, res) => {
-    const { lon, lat, nb_POIs } = req.body;
+    const { lon, lat, nb_POIs } = req.query;
     console.log(lon, lat, nb_POIs);
 
     const result = await getIrisDataInteractor(
