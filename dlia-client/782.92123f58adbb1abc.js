@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkDLIA_client=self.webpackChunkDLIA_client||[]).push([[782],{782:(f,g,o)=>{o.d(g,{N6:()=>m});var d=o(4650),a=o(3238);let m=(()=>{class r{}return r.\u0275fac=function(e){return new(e||r)},r.\u0275mod=d.oAB({type:r}),r.\u0275inj=d.cJS({imports:[[a.uc,a.BQ],a.uc,a.BQ]}),r})()}}]);
