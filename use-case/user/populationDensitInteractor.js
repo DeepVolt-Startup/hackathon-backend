@@ -1,30 +1,14 @@
-const populationDensitInteractor = async (
-    inputPolygon,
-    sequelize,
-    Grid,
-    limit,
-) => {
+const populationDensitInteractor = async (sequelize) => {
     try {
         const polygons = await sequelize.query(
             `
-            SELECT pop_densit, geom
-            FROM grids
-            WHERE EXISTS (
-                SELECT 1
-                FROM ST_Dump(geom) AS poly
-                WHERE (
-                    ST_Intersects(poly.geom, ST_SetSRID(ST_GeomFromGeoJSON('${JSON.stringify(
-                        inputPolygon.data.geometry,
-                    )}'), 4326))
-                        OR ST_Within(poly.geom, ST_SetSRID(ST_GeomFromGeoJSON('${JSON.stringify(
-                            inputPolygon.data.geometry,
-                        )}'), 4326)))
-                            AND ST_IsValid(ST_SetSRID(ST_GeomFromGeoJSON('${JSON.stringify(
-                                inputPolygon.data.geometry,
-                            )}'), 4326))
-            )
-            ORDER BY RANDOM()
-            limit ${limit};
+            SELECT gid, objectid,
+                municipali, gouvernora,
+                sum_nbsect, sum_popula,
+                shape__are, shape__len,
+                pop_densit,
+                geom
+            FROM tunisia_population
         `,
             {
                 type: sequelize.QueryTypes.SELECT,

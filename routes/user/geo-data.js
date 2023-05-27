@@ -16,13 +16,13 @@ const {
 const router = express.Router();
 
 // geodata routes
-router.get("/geo-data/area_stats", getIrisDataController);
+router.get("/geo-data/tunisia-population/site-attractiveness-score", getIrisDataController);
 
 router.get("/geo-data/commune/commune-details/ev-share", getEvShareController);
 
 router.post("/geo-data/iris/potential-score", potentialScoreController);
 
-router.post("/geo-data/grid/population-density", populationDensitController);
+router.get("/geo-data/tunisia-population/population-density", populationDensitController);
 
 router.post("/geo-data/grid/avg-revenu", averageRevenuController);
 
