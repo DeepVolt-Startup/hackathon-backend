@@ -9,8 +9,10 @@ const chargePointsController = require("./chargePointsController");
 const evChargePointsDistribController = require("./evChargePointsDistribController");
 const populationAgeDistribController = require("./populationAgeDistribController");
 const evStatsController = require("./evStatsController");
+const tunisiaCharginStations = require("./tunisiaCharginStations");
 
 module.exports = {
+    tunisiaCharginStations,
     evStatsController,
     populationAgeDistribController,
     evChargePointsDistribController,

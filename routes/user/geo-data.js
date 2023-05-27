@@ -10,6 +10,7 @@ const {
     evChargePointsDistribController,
     populationAgeDistribController,
     evStatsController,
+    tunisiaCharginStations,
 } = require("../../controllers/user/geodata/index");
 
 const router = express.Router();
@@ -34,5 +35,7 @@ router.get("/geo-data/stations/charge-points-distribution", evChargePointsDistri
 router.get("/geo-data/grid/age-distribution", populationAgeDistribController);
 
 router.get("/geo-data/charging_stations/ev-stats", evStatsController);
+
+router.get("/geo-data/tunisia-charging_stations", tunisiaCharginStations);
 
 module.exports = router;
